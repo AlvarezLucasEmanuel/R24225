@@ -8,6 +8,7 @@ body {
     margin: 8px;
 }
 
+
 header {
     display: flex;
     justify-content: space-around;
@@ -20,7 +21,7 @@ header {
     border-bottom: 0.3em solid rgb(166, 32, 5);
 }
 footer {
-    display: block;
+    display: flex;
     unicode-bidi: isolate;
 }
 
@@ -91,6 +92,12 @@ nav li a:hover{
     height: 450px;
     border-bottom: 0.3em solid rgb(166, 32, 5);
 }
+.imagen-producto{  
+    width: 18em;
+    height: 10em;
+    object-fit:contain;
+    border-radius: 0.5em;   
+}
 
 .titulo-inicio {
     display: flex;
@@ -131,13 +138,13 @@ nav li a:hover{
     background: linear-gradient(40deg, rgba(94, 3, 3, 0.57) 0%, rgba(255,255,255,0.75) 30%, rgba(255,255,255,0.75) 70%, rgba(94, 3, 3, 0.57) 100%);
 }
 .grid-container-resenas {
-    width: 110%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
 }
 .grid-container-resenas {
-    height: 120%;
+    height: 100%;
     background-image: linear-gradient(rgba(253, 249, 249, 0.5), rgba(0, 0, 0, 0.9));
     background-size: cover;
     border-bottom: 0.2em solid rgb(166, 32, 5);
@@ -276,6 +283,12 @@ form label{
     background-size: cover;
 
 }
+.mapa{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}
 .grid-container-resenas{background-image: url(imagenes/fondorecital.jpg);
 
 }
@@ -308,7 +321,7 @@ form label{
     height: 5em;
 }
 
- header {
+header {
         flex-direction: column; 
         height: auto;
     }
@@ -343,3 +356,74 @@ form label{
     }
 
 
+
+body {
+    font-size: 1rem;
+}
+
+header img.imagenlogo {
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul {
+    flex-direction: row;
+    gap: 1em;
+}
+
+.imagen-inicio {
+    height: auto;
+    max-width: 100%;
+}
+
+
+.grid-container-resenas {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+}
+
+@media (min-width: 768px) {
+    .grid-container-resenas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container-resenas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.container-footer, .container {
+    flex-direction: column;
+    text-align: center;
+}
+
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titulo-inicio p, .titulo-seccion p {
+        font-size: 1.5em;
+        padding: 0.3em;
+    }
+
+    #icon_cart {
+        position: relative;
+        right: 0;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+}
